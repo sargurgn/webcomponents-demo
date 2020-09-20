@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>React Host App</title>
+  <script src="http://localhost:80/react.webcomponent.js"></script>
+  <script src="http://localhost:80/react.formcomponent.js"></script>
+  <script type="module">
+    function loadWebComponents(tag, library, defaultPkg, component) {
+      try {
+        if (library && defaultPkg && component) {
+          window.customElements.define(tag, component);
+        }
+      } catch (err) {
+        const errorContainer = document.createElement('div');
+        errorContainer.setAttribute("id", tag + "-unavailable");
+        if (document.body != null) {
+          document.body.appendChild(errorContainer);
+        }
+        console.log("Couldn't load", tag);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function loadAllComponents() {
+      loadWebComponents('testable-component', testablewebcomponent, testablewebcomponent.default, testablewebcomponent.default.TestableComponent);
+      loadWebComponents('testable-formcomponent', testableformcomponent, testableformcomponent.default, testableformcomponent.default.TestableFormComponent);
+    }, false);
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+  <div id="root">
+    
+  </div>
+</body>
+
+</html>
