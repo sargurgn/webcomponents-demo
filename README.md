@@ -1,6 +1,9 @@
 # webcomponents-demo
 This project uses web-react-components libary to convert react project to web-component.
+
 Unit tests are run using Jest and are written using react testing library and enzyme.
+
+Integration tests are written and run using cypress automation framework.
 
 ### Build Web-Components
 ```sh build.sh```
