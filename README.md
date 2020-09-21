@@ -16,6 +16,9 @@ cd testable-webcomponent
 npm test
 ```
 We can find the test results under test-result directory and coverage report under coverage directory
+![Test Result](sample-images/coverage-report.png)
+
+![Coverage Report](sample-images/unit-test-report.png)
 
 Start Web Server
 ```
@@ -39,3 +42,4 @@ npm start
 ```
 npm run it-test
 ```
+![Integration Test Result](sample-images/cypress-result.png)
