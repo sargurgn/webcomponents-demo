@@ -1,7 +1,18 @@
 # webcomponents-demo
+This project uses web-react-components libary to convert react project to web-component.
+Unit tests are run using Jest and are written using react testing library and enzyme.
 
 ### Build Web-Components
 ```sh build.sh```
+
+This creates js files in dist directory for each webcomponent we are exporting.
+
+#### Running Unit tests for webcomponents
+```
+cd testable-webcomponent
+npm test
+```
+We can find the test results under test-result directory and coverage report under coverage directory
 
 Start Web Server
 ```
@@ -20,4 +31,8 @@ location ~* \.(js|jpg|png|css)$ {
 cd react-host-app
 npm install
 npm start
+```
+#### Run integration tests (Testing web-component from host project)
+```
+npm run it-test
 ```
